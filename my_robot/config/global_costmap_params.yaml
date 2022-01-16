@@ -1,0 +1,15 @@
+global_costmap:
+   global_frame: map
+   robot_base_frame: robot_footprint
+   update_frequency: 3.0
+   publish_frequency: 3.0
+   width: 16.0
+   height: 16.0
+   resolution: 0.02
+   static_map: true
+   rolling_window: false
+
+
+plugins:
+   - {name: static_map,       type: "costmap_2d::StaticLayer"}
+   - {name: obstacles,        type: "costmap_2d::VoxelLayer"}
